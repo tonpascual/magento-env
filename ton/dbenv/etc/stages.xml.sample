@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <urls>
+        <item type="production">magento.2.1.3.0.com</item>
+        <item type="staging">magento.2.1.3.0.staging.test</item>
+        <item type="dev">magento.2.1.3.0.test</item>
+    </urls>
+    <production>
+        <db>
+            <host>172.17.0.3</host>
+            <dbname>dev_magento_2130</dbname>
+            <username>root</username>
+            <password>may20081</password>            
+        </db>
+    </production>
+    <staging>
+        <db>
+            <host>172.17.0.3</host>
+            <dbname>dev_magento_2130</dbname>
+            <username>root</username>
+            <password>may20082</password>            
+        </db>
+    </staging>
+    <dev>
+        <db>
+            <host>172.17.0.3</host>
+            <dbname>dev_magento_2130</dbname>
+            <username>root</username>
+            <password>may2008</password>            
+        </db>
+    </dev>
+</config>
