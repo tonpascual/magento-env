@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Ton\Env\Plugin\Framework\App\Dbenv">
+        <arguments>
+            <argument name="moduleReader" xsi:type="object">Magento\Framework\Module\Dir\Reader</argument>
+            <argument name="xmlParser" xsi:type="object">Magento\Framework\Xml\Parser</argument>
+            <argument name="xmlParser" xsi:type="object">Magento\Framework\Xml\Parser</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\App\ResourceConnection\ConnectionFactory">
+        <plugin	name="Custom DB Env" type="Ton\Env\Plugin\Framework\App\Dbenv" sortOrder="1"/>        
+    </type>       	    
+</config>
