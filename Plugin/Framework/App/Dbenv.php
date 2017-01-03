@@ -1,5 +1,5 @@
 <?php
-namespace Ton\Env\Plugin\Framework\App;
+namespace Tonpascual\Env\Plugin\Framework\App;
 
 use Magento\Framework\App\Request\Http;
 use Magento\Framework\Module\Dir;
