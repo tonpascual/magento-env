@@ -9,5 +9,22 @@
     </type>
     <type name="Magento\Framework\App\ResourceConnection\ConnectionFactory">
         <plugin	name="Custom DB Env" type="Tonpascual\Env\Plugin\Framework\App\Dbenv" sortOrder="1"/>        
-    </type>       	    
+    </type>      
+    
+    <type name="Tonpascual\Env\Console\Command\EnvCommand">
+        <arguments>
+            <argument name="moduleReader" xsi:type="object">Magento\Framework\Module\Dir\Reader</argument>
+            <argument name="xmlParser" xsi:type="object">Magento\Framework\Xml\Parser</argument>
+            <argument name="xmlGenerator" xsi:type="object">Magento\Framework\Xml\Generator</argument>
+            <argument name="config" xsi:type="object">Magento\Framework\App\Config\ScopeConfigInterface</argument>
+            <argument name="dbenv" xsi:type="object">Tonpascual\Env\Plugin\Framework\App\Dbenv</argument>
+        </arguments>
+    </type>    
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="EnvCommand" xsi:type="object">Tonpascual\Env\Console\Command\EnvCommand</item>
+            </argument>
+        </arguments>        
+    </type>             	    
 </config>
